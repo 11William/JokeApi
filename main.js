@@ -1,5 +1,5 @@
 const app = require('express')();
-const fs = require('fs');
+const fs = require('fs').promises;
 const PORT = 6921;
 
 const pathDark = "Jokes/darkJokes.json";
@@ -9,8 +9,8 @@ var lastTenDark = [];
 var lastTenJokes = [];
 
 
-function getDarkJoke() {
-    const data = fs.readFileSync(pathDark);
+async function getDarkJoke() {
+    const data = await fs.readFile(pathDark, 'utf8');
     const jokes = JSON.parse(data).darkJokes;
     let randomIndex;
 
@@ -26,8 +26,8 @@ function getDarkJoke() {
     return jokes[randomIndex];
 }
 
-function getJoke() {
-    const data = fs.readFileSync(pathJoke);
+async function getJoke() {
+    const data = await fs.readFile(pathJoke, 'utf8');
     const jokes = JSON.parse(data).jokes;
     let randomIndex;
 
@@ -48,17 +48,17 @@ function getJoke() {
 
 
 
-app.get("/darkJoke", (req, res) => {
+app.get("/darkJoke", async (req, res) => {
     console.log("Someone requested a dark joke!");
-    var joke = getDarkJoke();
+    var joke = await getDarkJoke();
     console.log(joke.joke);
     res.send(joke.joke);
     //res.send("Why did the tomato turn red? Because it saw the salad dressing!");
 });
 
-app.get("/joke", (req, res) => {
+app.get("/joke", async (req, res) => {
     console.log("Someone requested a joke!");
-    var joke = getJoke();
+    var joke = await getJoke();
     console.log(joke.joke);
     res.send(joke.joke);
     //res.send("Why did the tomato turn red? Because it saw the salad dressing!");
