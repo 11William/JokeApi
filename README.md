@@ -6,7 +6,7 @@ This is a simple Joke API built with Node.js and Express. It serves random jokes
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/JokeApi.git
+    git clone https://github.com/11William/JokeApi.git
     ```
 
 2. Navigate to the project directory:
