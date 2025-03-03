@@ -1,0 +1,68 @@
+{
+	"jokes": [
+		{
+			"id": 1,
+			"joke": "Why don't skeletons fight each other? They don't have the guts."
+		},
+		{
+			"id": 2,
+			"joke": "I told my wife she was drawing her eyebrows too high. She looked surprised."
+
+		},
+		{
+			"id": 3,
+			"joke": "Why don't scientists trust atoms? Because they make up everything!"
+
+		},
+		{
+			"id": 4,
+			"joke": "Why did the scarecrow win an award? Because he was outstanding in his field."
+
+		},
+		{
+			"id": 5,
+			"joke": "Why don't some couples go to the gym? Because some relationships don't work out."
+
+		},
+		{
+			"id": 6,
+			"joke": "I would avoid the sushi if I was you. It’s a little fishy."
+
+		},
+		{
+			"id": 7,
+			"joke": "Want to hear a joke about construction? I'm still working on it."
+
+		},
+		{
+			"id": 8,
+			"joke": "Why don't programmers like nature? It has too many bugs."
+
+		},
+		{
+			"id": 9,
+			"joke": "Why do cows have hooves instead of feet? Because they lactose."
+
+		},
+		{
+			"id": 10,
+			"joke": "Why did the math book look sad? Because it had too many problems."
+
+		},
+		{
+			"id": 11,
+			"joke": "What do you call fake spaghetti? An impasta."
+
+		},
+		{
+			"id": 12,
+			"joke": "Why was the big cat disqualified from the race? Because it was a cheetah."
+
+		},
+		{
+			"id": 13,
+			"joke": "What do you call cheese that isn't yours? Nacho cheese."
+
+		}
+	]
+}
