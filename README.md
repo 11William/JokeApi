@@ -2,6 +2,8 @@
 
 This is a simple Joke API built with Node.js and Express. It serves random jokes from two categories: dark jokes and general jokes.
 
+Disclaimer: The dark jokes are really dark so dont get offended.
+
 ## Installation
 
 1. Clone the repository:
