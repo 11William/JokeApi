@@ -52,7 +52,7 @@ app.get("/darkJoke", async (req, res) => {
     console.log("Someone requested a dark joke!");
     var joke = await getDarkJoke();
     console.log(joke.joke);
-    res.send(joke.joke);
+    res.send(joke);
     //res.send("Why did the tomato turn red? Because it saw the salad dressing!");
 });
 
@@ -60,7 +60,7 @@ app.get("/joke", async (req, res) => {
     console.log("Someone requested a joke!");
     var joke = await getJoke();
     console.log(joke.joke);
-    res.send(joke.joke);
+    res.send(joke);
     //res.send("Why did the tomato turn red? Because it saw the salad dressing!");
 });
 
