@@ -1,4 +1,18 @@
 {
+  "name": "joke-api",
+  "version": "1.0.0",
+  "description": "A simple Joke API built with Node.js and Express",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "dev": "node main.js",
+    "docker:build": "docker build -t joke-api .",
+    "docker:run": "docker run -p 6921:6921 joke-api",
+    "docker:compose": "docker-compose up -d"
+  },
+  "keywords": ["joke", "api", "express", "nodejs"],
+  "author": "11William",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.21.2",
     "fs": "^0.0.1-security"

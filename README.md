@@ -58,11 +58,70 @@ Disclaimer: The dark jokes are really dark so dont get offended.
     }
     ```
 
+## Docker Setup
+
+### Prerequisites
+- Docker installed on your system
+- Docker Compose (optional, but recommended)
+
+### Building and Running with Docker
+
+#### Option 1: Using Docker directly
+
+1. Build the Docker image:
+    ```sh
+    docker build -t joke-api .
+    ```
+
+2. Run the container:
+    ```sh
+    docker run -p 6921:6921 joke-api
+    ```
+
+#### Option 2: Using Docker Compose (Recommended)
+
+1. Start the application:
+    ```sh
+    docker-compose up -d
+    ```
+
+2. Stop the application:
+    ```sh
+    docker-compose down
+    ```
+
+#### Option 3: Using npm scripts
+
+1. Build the image:
+    ```sh
+    npm run docker:build
+    ```
+
+2. Run the container:
+    ```sh
+    npm run docker:run
+    ```
+
+3. Or use Docker Compose:
+    ```sh
+    npm run docker:compose
+    ```
+
+### Accessing the API
+
+Once the container is running, the API will be available at:
+- **Base URL:** `http://localhost:6921`
+- **Dark Jokes:** `http://localhost:6921/darkJoke`
+- **General Jokes:** `http://localhost:6921/joke`
+
 ## File Structure
 
 - [main.js](http://_vscodecontentref_/1): The main server file that contains the API logic.
 - [darkJokes.json](http://_vscodecontentref_/2): JSON file containing dark jokes.
 - [jokes.json](http://_vscodecontentref_/3): JSON file containing general jokes.
+- `Dockerfile`: Docker configuration for building the container image.
+- `docker-compose.yml`: Docker Compose configuration for easy deployment.
+- `.dockerignore`: Specifies files to exclude from the Docker build context.
 
 ## Example
 

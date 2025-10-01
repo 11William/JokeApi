@@ -1,0 +1,12 @@
+# Docker Compose for JokeApi
+version: '3.8'
+
+services:
+  joke-api:
+    build: .
+    ports:
+      - "6921:6921"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    container_name: joke-api
