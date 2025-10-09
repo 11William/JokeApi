@@ -1,8 +1,8 @@
 # Joke API
 
-This is a simple Joke API built with Node.js and Express. It serves random jokes from two categories: dark jokes and general jokes.
+This is a simple Joke API built with Node.js and Express. It serves random jokes from a json file.
 
-Disclaimer: The dark jokes are really dark so dont get offended.
+
 
 ## Installation
 
@@ -32,20 +32,7 @@ Disclaimer: The dark jokes are really dark so dont get offended.
 
 ## API Endpoints
 
-### Get a Random Dark Joke
-
-- **URL:** `/darkJoke`
-- **Method:** `GET`
-- **Description:** Returns a random dark joke.
-- **Response:**
-    ```json
-    {
-        "id": 1,
-        "joke": "Where did Billy go after getting lost on a minefield? Everywhere....."
-    }
-    ```
-
-### Get a Random General Joke
+### Get a Random Joke
 
 - **URL:** `/joke`
 - **Method:** `GET`
@@ -111,23 +98,22 @@ Disclaimer: The dark jokes are really dark so dont get offended.
 
 Once the container is running, the API will be available at:
 - **Base URL:** `http://localhost:6921`
-- **Dark Jokes:** `http://localhost:6921/darkJoke`
-- **General Jokes:** `http://localhost:6921/joke`
+- **Jokes:** `http://localhost:6921/joke`
+
+Its recommended to use a proxy like nginx or traefik, but you also could just port forward the port 2169
 
 ## File Structure
 
 - [main.js](http://_vscodecontentref_/1): The main server file that contains the API logic.
-- [darkJokes.json](http://_vscodecontentref_/2): JSON file containing dark jokes.
-- [jokes.json](http://_vscodecontentref_/3): JSON file containing general jokes.
+- [jokes.json](http://_vscodecontentref_/3): JSON file containing jokes.
 - `Dockerfile`: Docker configuration for building the container image.
 - `docker-compose.yml`: Docker Compose configuration for easy deployment.
 - `.dockerignore`: Specifies files to exclude from the Docker build context.
 
 ## Example
 
-To get a random dark joke, send a GET request to `http://localhost:6921/darkJoke`. The response will be a JSON object containing the joke and its ID.
 
-To get a random general joke, send a GET request to `http://localhost:6921/joke`. The response will be a JSON object containing the joke and its ID.
+To get a random joke, send a GET request to `http://localhost:6921/joke`. The response will be a JSON object containing the joke and its ID.
 
 ## License
 
