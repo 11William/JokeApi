@@ -1,6 +1,9 @@
 # Joke API
 
-This is a simple Joke API built with Node.js and Express. It serves random jokes from a json file.
+This is a very simple Joke API built with Node.js and Express. It serves random jokes from a json file.
+You are welcome to contribute with new jokes or even add new catagories of jokes with a new api endpoint.
+
+
 
 
 
